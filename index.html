@@ -1,0 +1,71 @@
+@model Practica_1.Models.Usuario
+@{
+    ViewData["Title"] = "Registro";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Registrar Usuario</h1>
+       <form action="confirmacion.html" method="POST"">
+
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control form-control-sm" type="text" placeholder="Escribe el nombre del usuario" aria-label=".form-control-sm" />
+
+        <label asp-for="Apellido_Paterno" class="control-label"></label>
+        <input asp-for="Apellido_Paterno" class="form-control form-control-sm" type="text" placeholder="Escribe el apellido paterno" aria-label=".form-control-sm"/>
+
+        <label asp-for="Apellido_Materno" class="control-label"></label>
+        <input asp-for="Apellido_Materno" class="form-control form-control-sm" type="text" placeholder="Escribe el apellido materno" aria-label=".form-control-sm"/>
+
+        <div>
+            <select name="Sexo" class="form-select" aria-label="Default select example">
+                <option selected disabled>Seleccione sexo</option>
+                <option value="H">Hombre</option>
+                <option value="M">Mujer</option>
+                <option value="?">Prefiero no especificar</option>
+            </select>    
+        </div>
+
+        <label asp-for="Correo" class="control-label"></label>
+        <input asp-for="Correo" class="form-control form-control-sm" type="text" placeholder="Escribe el correo" aria-label=".form-control-sm"/>
+
+        <label asp-for="Telefono" class="control-label"></label>
+        <input asp-for="Telefono" class="form-control form-control-sm" type="text" placeholder="Escribe el telefono" aria-label=".form-control-sm"/>
+        
+        <div>
+           <select name="Distrito" class="form-select" aria-label="Default select example">
+                <option selected disabled>Seleccione distrito</option>
+                <option value="A">Distrito A</option>
+                <option value="B">Distrito B</option>
+                <option value="C">Distrito C</option>
+                <option value="D">Distrito D</option>
+            </select>     
+        </div>
+
+        
+            <label asp-for="Direccion" class="control-label"></label>
+            <input asp-for="Direccion" class="form-control form-control-sm" type="text" placeholder="Escribe la direccion" aria-label=".form-control-sm"/>
+        
+        
+            <label asp-for="Nombre_Mascota" class="control-label"></label>
+            <input asp-for="Nombre_Mascota" class="form-control form-control-sm" type="text" placeholder="Escribe el nombre de la mascota" aria-label=".form-control-sm"/>
+              
+        
+        <div>
+            <select name="Tipo_Mascota" class="form-select" aria-label="Default select example">
+                <option selected disabled>Seleccione tipo de mascota</option>
+                <option value="P">Perro</option>
+                <option value="G">Gato</option>
+                <option value="H">Hamster</option>
+            </select>    
+        </div>
+        
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Registrar</button> 
+        </div>
+    </form>
+    <h1>@ViewData["Message"]</h1>
+</div>
